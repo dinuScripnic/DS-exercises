@@ -66,6 +66,10 @@ message CustomerServiceResponse {
   repeated Customer customers = 3;
 }
 
+message RichCustomer {
+  double amount = 1;
+}
+
 //
 // Main service for customer administration
 //
@@ -79,4 +83,9 @@ service CustomerService {
   // Adds a number of purchases for a customer
   //
   rpc SendPurchases(stream Purchase) returns (CustomerServiceResponse);
+
+  //
+  // recieve all the customers with purchase amount > 150
+  //
+  rpc RichCustomers(CustomerServiceResponse) returns (stream Customer);
 }
