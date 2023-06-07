@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <a href="frontend.html">For User Management Functionality</a>
+    <title>Create a new job</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Create a new job</h1>
+    <form id="job-form">
+      <label for="date-range">Date Range:</label>
+      <input type="text" id="date-range" name="date-range" required>
+      <br>
+      <label for="assets">Assets:</label>
+      <input type="text" id="assets" name="assets" required>
+        give assets as integers separated with comma
+      <br>
+      <button type="button" onclick="createJob()">Submit</button>
+    </form>
+    <h1>Update Job</h1>
+    <form id="jobupdate-form">
+        <label for="job-id-update">Job ID:</label>
+        <input type="text" id="job-id-update" name="job-id-update" required>
+        <br>
+        <button type="button" onclick="updateJob()">Submit</button>
+    </form>
+    <h1>Jobs List</h1>
+    <button type="button" onclick="getJobs()">Get Jobs</button>
+    <div id="jobs"></div>
+    <h1>Create a new result</h1>
+    <form id="result-form">
+      <label for="job-id">Job ID:</label>
+      <input type="text" id="job-id" name="job-id" required>
+      <br>
+      <label for="result_assets">Assets:</label>
+      <input type="text" id="result_assets" name="result_assets" required>
+      give assets as integers separated with comma
+      <br>
+      <button type="button" onclick="createResult()">Submit</button>
+    </form>
+    <h1>Results List</h1>
+    <button type="button" onclick="getResults()">Get Results</button>
+    <div id="results"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

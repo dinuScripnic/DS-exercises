@@ -1,0 +1,145 @@
+2023-05-16 09:25:48,325 [INFO] 200 - Log file created
+2023-05-16 09:56:08,692 [INFO] 200 - User admin got all queues
+2023-05-16 09:56:12,778 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 09:56:18,917 [INFO] 200 - User admin got all queues
+2023-05-16 09:57:21,217 [INFO] 201 - User admin created a queue new_queue
+2023-05-16 10:01:00,879 [INFO] 200 - User admin got all queues
+2023-05-16 10:01:04,964 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:01:09,038 [ERROR] 404 - User admin tried to get a queue that doesn't exist
+2023-05-16 10:01:13,136 [ERROR] 409 - User admin tried to create a queue that already exists
+2023-05-16 10:01:17,213 [INFO] 200 - User admin got all queues
+2023-05-16 10:01:23,343 [INFO] 200 - User admin got all queues
+2023-05-16 10:01:29,458 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:01:35,595 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:02:31,891 [INFO] 200 - User admin got all queues
+2023-05-16 10:02:36,007 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:02:40,095 [ERROR] 404 - User admin tried to get a queue that doesn't exist
+2023-05-16 10:02:44,178 [ERROR] 409 - User admin tried to create a queue that already exists
+2023-05-16 10:02:48,238 [INFO] 200 - User admin got all queues
+2023-05-16 10:03:16,004 [INFO] 200 - User admin got all queues
+2023-05-16 10:03:20,109 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:03:24,182 [ERROR] 404 - User admin tried to get a queue that doesn't exist
+2023-05-16 10:03:28,282 [INFO] 201 - User admin created a queue new_queue
+2023-05-16 10:03:32,366 [INFO] 200 - User admin got all queues
+2023-05-16 10:03:38,482 [INFO] 200 - User admin got all queues
+2023-05-16 10:03:44,607 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:03:50,703 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:04:48,875 [INFO] 200 - User admin got all queues
+2023-05-16 10:04:52,979 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:04:57,076 [ERROR] 404 - User admin tried to get a queue that doesn't exist
+2023-05-16 10:05:01,162 [ERROR] 409 - User admin tried to create a queue that already exists
+2023-05-16 10:05:05,277 [INFO] 200 - User admin got all queues
+2023-05-16 10:05:11,418 [INFO] 200 - User admin got all queues
+2023-05-16 10:05:42,047 [INFO] 200 - User admin got all queues
+2023-05-16 10:05:46,122 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:05:50,222 [ERROR] 404 - User admin tried to get a queue that doesn't exist
+2023-05-16 10:05:54,311 [ERROR] 409 - User admin tried to create a queue that already exists
+2023-05-16 10:05:58,402 [INFO] 200 - User admin got all queues
+2023-05-16 10:06:04,551 [INFO] 200 - User admin got all queues
+2023-05-16 10:06:25,981 [INFO] 200 - User admin got all queues
+2023-05-16 10:06:30,032 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:06:34,120 [ERROR] 404 - User admin tried to get a queue that doesn't exist
+2023-05-16 10:06:38,194 [ERROR] 409 - User admin tried to create a queue that already exists
+2023-05-16 10:06:42,277 [INFO] 200 - User admin got all queues
+2023-05-16 10:06:48,377 [INFO] 200 - User admin got all queues
+2023-05-16 10:08:34,347 [INFO] 200 - User admin got all queues
+2023-05-16 10:08:38,418 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:08:42,486 [ERROR] 404 - User admin tried to get a queue that doesn't exist
+2023-05-16 10:08:46,544 [ERROR] 409 - User admin tried to create a queue that already exists
+2023-05-16 10:08:50,612 [INFO] 200 - User admin got all queues
+2023-05-16 10:08:54,688 [INFO] 200 - User admin deleted a queue new_queue
+2023-05-16 10:08:58,760 [INFO] 200 - User admin got all queues
+2023-05-16 10:09:04,884 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:09:10,988 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:26:19,400 [INFO] 200 - User admin got all queues
+2023-05-16 10:26:23,469 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:26:27,567 [INFO] 200 - User admin got the queue size of queue_job
+2023-05-16 10:26:31,662 [INFO] 201 - User admin created a queue new_queue
+2023-05-16 10:26:35,735 [INFO] 200 - User admin deleted a queue new_queue
+2023-05-16 10:26:41,852 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:28:43,453 [INFO] 200 - User admin got all queues
+2023-05-16 10:28:47,532 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:28:51,610 [INFO] 200 - User admin got the queue size of queue_job
+2023-05-16 10:28:55,680 [INFO] 201 - User admin created a queue new_queue
+2023-05-16 10:28:59,761 [INFO] 200 - User admin deleted a queue new_queue
+2023-05-16 10:29:03,861 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:29:07,930 [INFO] 200 - User admin pulled a message from the queue queue_job
+2023-05-16 10:31:30,196 [INFO] 200 - User admin got all queues
+2023-05-16 10:31:34,270 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:31:38,347 [INFO] 200 - User admin got the queue size of queue_job
+2023-05-16 10:31:42,424 [INFO] 201 - User admin created a queue new_queue
+2023-05-16 10:31:46,509 [INFO] 200 - User admin deleted a queue new_queue
+2023-05-16 10:31:50,601 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:31:54,658 [INFO] 200 - User admin pulled a message from the queue queue_job
+2023-05-16 10:31:58,729 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:32:02,796 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:32:06,839 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:32:10,930 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:32:14,994 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:32:19,069 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:32:28,413 [INFO] 200 - User admin got all queues
+2023-05-16 10:32:32,486 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:32:36,559 [INFO] 200 - User admin got the queue size of queue_job
+2023-05-16 10:32:40,628 [INFO] 201 - User admin created a queue new_queue
+2023-05-16 10:32:44,733 [INFO] 200 - User admin deleted a queue new_queue
+2023-05-16 10:32:48,814 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:32:52,883 [INFO] 200 - User admin pulled a message from the queue queue_job
+2023-05-16 10:32:56,949 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:33:01,021 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:33:05,093 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:33:09,186 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:33:13,265 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:33:17,338 [ERROR] 403 - User admin tried to push a message to a full queue
+2023-05-16 10:33:21,421 [ERROR] 404 - User admin tried to pull a message from a queue that doesn't exist
+2023-05-16 10:35:50,938 [INFO] 200 - User admin got all queues
+2023-05-16 10:35:55,014 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:35:59,075 [INFO] 200 - User admin got the queue size of queue_job
+2023-05-16 10:36:03,154 [INFO] 201 - User admin created a queue new_queue
+2023-05-16 10:36:07,239 [INFO] 200 - User admin deleted a queue new_queue
+2023-05-16 10:36:11,312 [ERROR] 403 - User admin tried to push a message to a full queue
+2023-05-16 10:36:15,384 [INFO] 200 - User admin pulled a message from the queue queue_job
+2023-05-16 10:36:19,469 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:36:23,565 [ERROR] 403 - User admin tried to push a message to a full queue
+2023-05-16 10:36:27,636 [ERROR] 403 - User admin tried to push a message to a full queue
+2023-05-16 10:36:31,734 [ERROR] 403 - User admin tried to push a message to a full queue
+2023-05-16 10:36:35,805 [ERROR] 403 - User admin tried to push a message to a full queue
+2023-05-16 10:36:39,865 [ERROR] 403 - User admin tried to push a message to a full queue
+2023-05-16 10:36:43,922 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:36:48,021 [ERROR] 404 - User admin tried to pull a message from a queue that doesn't exist
+2023-05-16 10:36:52,138 [ERROR] 404 - User admin tried to push a message to a queue that doesn't exist
+2023-05-16 10:37:40,634 [INFO] 200 - User admin got all queues
+2023-05-16 10:37:44,740 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:37:48,822 [INFO] 200 - User admin got the queue size of queue_job
+2023-05-16 10:37:52,898 [INFO] 201 - User admin created a queue new_queue
+2023-05-16 10:37:56,991 [INFO] 200 - User admin deleted a queue new_queue
+2023-05-16 10:38:01,082 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:38:05,142 [INFO] 200 - User admin pulled a message from the queue queue_job
+2023-05-16 10:38:09,233 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:38:13,295 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:38:17,400 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:38:21,481 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:38:25,541 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:38:29,613 [ERROR] 403 - User admin tried to push a message to a full queue
+2023-05-16 10:38:33,722 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:38:37,830 [ERROR] 404 - User admin tried to pull a message from a queue that doesn't exist
+2023-05-16 10:38:41,908 [ERROR] 404 - User admin tried to push a message to a queue that doesn't exist
+2023-05-16 10:38:48,238 [ERROR] 403 - User secretary tried to push a message
+2023-05-16 10:41:51,607 [INFO] 200 - User admin got all queues
+2023-05-16 10:41:55,659 [INFO] 200 - User admin got a queue queue_job
+2023-05-16 10:41:59,749 [INFO] 200 - User admin got the queue size of queue_job
+2023-05-16 10:42:03,841 [INFO] 201 - User admin created a queue new_queue
+2023-05-16 10:42:07,919 [INFO] 200 - User admin got all queues
+2023-05-16 10:42:12,025 [INFO] 200 - User admin deleted a queue new_queue
+2023-05-16 10:42:16,108 [INFO] 200 - User admin got all queues
+2023-05-16 10:42:20,194 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:42:24,287 [INFO] 200 - User admin pulled a message from the queue queue_job
+2023-05-16 10:42:28,373 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:42:32,460 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:42:36,554 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:42:40,638 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:42:44,723 [INFO] 201 - User admin pushed a message to the queue queue_job
+2023-05-16 10:42:48,822 [ERROR] 403 - User admin tried to push a message to a full queue
+2023-05-16 10:42:52,907 [ERROR] 403 - User admin tried to pull a message from an empty queue
+2023-05-16 10:42:57,007 [ERROR] 404 - User admin tried to pull a message from a queue that doesn't exist
+2023-05-16 10:43:01,081 [ERROR] 404 - User admin tried to push a message to a queue that doesn't exist
+2023-05-16 10:43:07,384 [ERROR] 403 - User secretary tried to push a message

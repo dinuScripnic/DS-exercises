@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>User Management</title>
+</head>
+<body>
+    <h1>User Management</h1>
+    <a href="master_frontend.html">For Master Data Functionality</a>
+    <div class="container">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">use "admin" as username<br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">use "admin" as password<br><br>
+
+            <button type="button" onclick="login()">Submit</button>
+        </form>
+    </div>
+    <div class="container">
+        <h2>Create User</h2>
+        <form>
+            <label for="new_username">Username:</label>
+            <input type="text" id="new_username" name="new_username"><br><br>
+            <label for="new_password">Password:</label>
+            <input type="password" id="new_password" name="new_password"><br><br>
+            <label for="new_role">Role:</label>
+            <select id="new_role" name="new_role">
+                <option value="Administrator">Administrator</option>
+                <option value="Secretary">Secretary</option>
+                <option value="Manager">Manager</option>
+            </select><br><br>
+            <button type="button" onclick="createUser()">Submit</button>
+        </form>
+    </div>
+    <div class="container">
+        <h2>Change User Role</h2>
+        <form>
+            <label for="change_username">Username:</label>
+            <input type="text" id="change_username" name="change_username"><br><br>
+            <label for="change_role">New Role:</label>
+            <select id="change_role" name="change_role">
+                <option value="Administrator">Administrator</option>
+                <option value="Secretary">Secretary</option>
+                <option value="Manager">Manager</option>
+            </select><br><br>
+            <button type="button" onclick="changeRole()">Submit</button>
+        </form>
+    </div>
+    <div class="container">
+        <h2>Delete User</h2>
+        <form>
+            <label for="delete_username">Username:</label>
+            <input type="text" id="delete_username" name="delete_username"><br><br>
+            <button type="button" onclick="deleteUser()">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
