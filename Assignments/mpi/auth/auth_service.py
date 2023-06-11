@@ -1,7 +1,9 @@
+from __future__ import annotations
+
 from fastapi import FastAPI, HTTPException
-from other.schemas import ChangeRole, Login, Role, User
-from other.logging_functionality import create_log_file, write_log
-from auth import AuthHandler
+from schema import Login, User, ChangeRole, Role
+from logs import create_log_file, write_log
+from authentication import AuthHandler
 from users import db, get_role, get_user
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -17,8 +19,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-
 
 
 # this is a test
@@ -85,6 +85,10 @@ async def create_user(token: str, user: User) -> int:
         token
     )  # decode the token and get the dict with data
     admin = get_user(admin)  # get the user from the database
+
+    if not admin:
+        raise HTTPException(status_code=401, detail="Invalid token")
+
     if admin.role == Role.Administrator:  # check the role
         if any(
             x.username == user.username for x in db
@@ -123,6 +127,10 @@ async def change_role(token: str, user: ChangeRole) -> int:
     """
     request = authHandler.decode_token(token)
     admin = get_user(request)
+
+    if not admin:
+        raise HTTPException(status_code=401, detail="Invalid token")
+
     if admin.role == Role.Administrator:
         change = get_user(user.username)
         if change is None:
@@ -152,6 +160,10 @@ async def delete_user(token: str, username: str) -> int:
     """
     admin = authHandler.decode_token(token)
     admin = get_user(admin)
+
+    if not admin:
+        raise HTTPException(status_code=401, detail="Invalid token")
+
     if admin.role == Role.Administrator:
         user = get_user(username)
         if user is None:
@@ -165,6 +177,7 @@ async def delete_user(token: str, username: str) -> int:
 
 if __name__ == "__main__":
     import uvicorn
+
     create_log_file()
 
     # run on port 8000

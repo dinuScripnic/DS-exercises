@@ -1,4 +1,6 @@
-from schemas import Queue
+from __future__ import annotations
+
+from schema import Queue
 import json
 import yaml
 import time
@@ -12,6 +14,7 @@ queue_file_path = config["queues_file"]["file_path"]
 max_queue_size = config["queues_file"]["max_queue_size"]
 queue_save_interval = config["queues_file"]["persist_interval"]
 
+
 def initialize_queues() -> list[Queue]:
     """
     If the queues file exists, it loads the queues from the file.
@@ -21,8 +24,7 @@ def initialize_queues() -> list[Queue]:
         with open(queue_file_path, "r") as f:
             queues = json.load(f)  # list[Queue]
             queues = [Queue(**queue) for queue in queues]
-            
-        
+
     except FileNotFoundError:
         # Initialize the queues with two empty queues
         queues = [
@@ -35,15 +37,16 @@ def initialize_queues() -> list[Queue]:
                 max_size=max_queue_size,
                 queue_id="queue_result",
                 queues=[],
-            )
+            ),
         ]
-        
+
     return queues
+
 
 queues = initialize_queues()
 
 
-def check_exist(queue_id:str) -> bool:
+def check_exist(queue_id: str) -> bool:
     """
     Searches for a queue with the specified id.
     Returns True if the queue exists, False otherwise.
@@ -60,7 +63,7 @@ def check_exist(queue_id:str) -> bool:
     return False
 
 
-def search_queue(queue_id:str) -> Queue|None:
+def search_queue(queue_id: str) -> Queue | None:
     """
     Returns the queue with the specified id.
 
@@ -76,7 +79,7 @@ def search_queue(queue_id:str) -> Queue|None:
     return None
 
 
-def delete_queue(queue_id:str) -> None:
+def delete_queue(queue_id: str) -> None:
     """
     Deletes the queue with the specified id.
 
@@ -97,14 +100,16 @@ class QueueSaver:
         self.queues = queues
         self.filename = queue_file_path
         self.save_interval = queue_save_interval
-        self.save_thread = threading.Thread(target=self.save_queues_periodically, daemon=True)
-    
+        self.save_thread = threading.Thread(
+            target=self.save_queues_periodically, daemon=True
+        )
+
     def start(self):
         """
         Starts the thread that saves the queues periodically.
         """
         self.save_thread.start()
-    
+
     def save_queues_periodically(self):
         """
         Saves the queues periodically. The interval is specified in the config file.
@@ -112,12 +117,12 @@ class QueueSaver:
         while True:
             self.save_queues()
             time.sleep(self.save_interval)
-    
+
     def save_queues(self):
         """
         Saves the queues to the file.
         """
-        with open(self.filename, 'w') as f:
+        with open(self.filename, "w") as f:
             q = [queue.__dict__ for queue in self.queues]
             json.dump(q, f)
 

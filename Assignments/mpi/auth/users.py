@@ -1,5 +1,7 @@
-from schemas import User, Role
-from auth import AuthHandler
+from __future__ import annotations
+
+from schema import User, Role
+from authentication import AuthHandler
 
 authHandler = AuthHandler()
 db = [
@@ -20,13 +22,14 @@ db = [
     ),
 ]
 
-def get_role(username: str) -> Role:
+
+def get_role(username: str) -> Role | None:
     for user in db:
         if user.username == username:
             return user.role
 
 
-def get_user(username: str) -> User:
+def get_user(username: str) -> User | None:
     for user in db:
         if user.username == username:
             return user

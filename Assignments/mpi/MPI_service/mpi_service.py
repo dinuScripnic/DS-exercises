@@ -2,27 +2,23 @@ from mpi4py import MPI
 import requests
 import time
 from timeseries import create_time_series, linear_fit, predict_value
-from schemas import Result
+from schema import Result
 from datetime import datetime
 
 
 comm = MPI.COMM_WORLD
-rank = comm.Get_rank()  
+rank = comm.Get_rank()
 size = comm.Get_size()
 scatter_tasks = None
 auth_url = "http://localhost:8000/auth/login/"
 queue_url = "http://localhost:7500/queue/"
 admin = {"username": "admin", "password": "admin"}
-timeseries = create_time_series(100,300)
+timeseries = create_time_series(100, 300)
 
 if rank == 0:
-    token = requests.post(
-        url=auth_url,
-        json=admin
-    ).content
+    token = requests.post(url=auth_url, json=admin).content
     # decode and get the token
     token = eval(token.decode("utf-8"))["token"]
-    
 
 
 while True:
@@ -30,7 +26,9 @@ while True:
         if rank == 0:
             pull_response = None
             while pull_response is None:
-                pull_response = requests.put(queue_url + "queue_job/pull", params={"token": token}).json()
+                pull_response = requests.put(
+                    queue_url + "queue_job/pull", params={"token": token}
+                ).json()
                 if "detail" in pull_response.keys():
                     print(pull_response["detail"])
                     time.sleep(3)
@@ -65,8 +63,11 @@ while True:
                 timestamp=str(datetime.now()),
                 assets=float(average[0]),
             )
-            requests.put(queue_url + "queue_result/push", params={"token": token}, json={'data':result.__dict__})
+            requests.put(
+                queue_url + "queue_result/push",
+                params={"token": token},
+                json={"data": result.__dict__},
+            )
     except Exception as e:
         print(e)
         quit()
-        

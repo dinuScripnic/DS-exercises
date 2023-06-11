@@ -1,22 +1,20 @@
 from pydantic import BaseModel
-from enum import Enum
+from enum import Enum, StrEnum, auto
 
-def __init__():
-    pass
 
-class Role(str, Enum):
-    Administrator = "Administrator"
-    Secretary = "Secretary"
-    Manager = "Manager"
+class Role(StrEnum):
+    Administrator = auto()
+    Secretary = auto()
+    Manager = auto()
 
     def __str__(self):
         return f"{self.value}"
 
 
-class Status(str, Enum):
-    Submitted = "Submitted"
-    Processing = "Processing"
-    Done = "Done"
+class Status(StrEnum):
+    Submitted = auto()
+    Processing = auto()
+    Done = auto()
 
     def __str__(self):
         return f"{self.value}"
@@ -73,17 +71,17 @@ class Push(BaseModel):  # not sure i need this
     search_id: str
 
     def __str__(self):
-        return f"{self.queue_id} {self.search_id}"    
+        return f"{self.queue_id} {self.search_id}"
 
 
 class Message(BaseModel):
     data: dict
-    
-    
+
+
 class Queue(BaseModel):
-    queue_id:str
-    max_size:int
-    queues:list[Message]
+    queue_id: str
+    max_size: int
+    queues: list[Message]
 
     def __str__(self):
         return f"{self.queue_id} {self.max_size} {self.queues}"

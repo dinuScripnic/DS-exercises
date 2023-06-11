@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import jwt
 from fastapi import HTTPException, Security
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
